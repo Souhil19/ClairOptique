@@ -1,5 +1,5 @@
-# **ClairOptique Project**
-##Endpoints of backend : 
+# **ClairOptique Project :** #
+##Endpoints of backend : ##
 
 ###Bringing latest 8 products > http://127.0.0.1:8000/api/v1/latest-products/
 ###List of all products (paginated by page) > http://127.0.0.1:8000/api/v1/products/
