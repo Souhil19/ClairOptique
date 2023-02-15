@@ -26,11 +26,14 @@ class Produit(models.Model):
     ref = models.SlugField()
     description = models.TextField(blank=True, null=True)
     prix = models.DecimalField(max_digits=6, decimal_places=0)
-    promotion = models.DecimalField(max_digits=6, decimal_places=0, default=0.00)
-    frais_livraison = models.DecimalField( max_digits=6, decimal_places=0,default=0)
+    promotion = models.DecimalField(max_digits=6, decimal_places=0, default=0)
+    livraison_gratuit = models.BooleanField( default= False)
+    thumbnail = models.ImageField(upload_to='uploads/', blank=True, null=True)
     image = models.ImageField(upload_to='uploads/', blank=True, null=True)
     image2 = models.ImageField(upload_to='uploads/', blank=True, null=True)
-    thumbnail = models.ImageField(upload_to='uploads/', blank=True, null=True)
+    image3 = models.ImageField(upload_to='uploads/', blank=True, null=True)
+    image4 = models.ImageField(upload_to='uploads/', blank=True, null=True)
+
     date_ajouté = models.DateTimeField(auto_now_add=True)
 
     class Meta:
