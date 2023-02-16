@@ -28,7 +28,7 @@ class CommandeSerializer(serializers.ModelSerializer):
             "address",
             "wilaya",
             "phone",
-            "tarif_livraison",
+            "livraison_gratuit",
             "articles",
             "prix_total"
         )

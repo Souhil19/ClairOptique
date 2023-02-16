@@ -13,9 +13,11 @@ class ProductSerializer(serializers.ModelSerializer):
             "description",
             "prix",
             "promotion",
-            "frais_livraison",
+            "livraison_gratuit",
             "get_image",
             "get_image2",
+            "get_image3",
+            "get_image4",
             "get_thumbnail"
         )
 

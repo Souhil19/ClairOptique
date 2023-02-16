@@ -55,6 +55,16 @@ class Produit(models.Model):
             return 'http://127.0.0.1:8000' + self.image2.url
         return ''
 
+    def get_image3(self):
+        if self.image3:
+            return 'http://127.0.0.1:8000' + self.image3.url
+        return ''
+
+    def get_image4(self):
+        if self.image4:
+            return 'http://127.0.0.1:8000' + self.image4.url
+        return ''
+
     def get_thumbnail(self):
         if self.thumbnail:
             return 'http://127.0.0.1:8000' + self.thumbnail.url
