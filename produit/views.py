@@ -11,16 +11,15 @@ from rest_framework.decorators import api_view
 from .models import Produit, Categorie
 from .serializers import ProductSerializer, CategorySerializer, CategoryItemSerializer
 
-
+"""
 class StandardResultsSetPagination(PageNumberPagination):
     page_size = 9
     page_size_query_param = 'page_size'
-    max_page_size = 9
+    max_page_size = 9"""
 
 class ProductsList(generics.ListCreateAPIView):
     queryset = Produit.objects.all()
     serializer_class = ProductSerializer
-    pagination_class = StandardResultsSetPagination
 
 class LatestProductsList(APIView):
     def get(self, request, format=None):
@@ -61,8 +60,8 @@ class CategoryDetail(APIView):
 class ProductListByCategory(generics.ListAPIView):
     queryset = Produit.objects.all()
     serializer_class = ProductSerializer
-    pagination_class = PageNumberPagination
-    pagination_class.page_size = 9
+#    pagination_class = PageNumberPagination
+#    pagination_class.page_size = 9
 
     def get_queryset(self):
         category = self.kwargs['category_slug']
@@ -73,4 +72,4 @@ class Search(generics.ListCreateAPIView):
     filter_backends = (filters.SearchFilter,)
     queryset = Produit.objects.all()
     serializer_class = ProductSerializer
-    pagination_class = StandardResultsSetPagination
+#    pagination_class = StandardResultsSetPagination
