@@ -27,6 +27,7 @@ class Produit(models.Model):
     description = models.TextField(blank=True, null=True)
     prix = models.DecimalField(max_digits=6, decimal_places=0)
     promotion = models.DecimalField(max_digits=6, decimal_places=0, default=0)
+    etoiles = models.IntegerField(max_length=1, default=5)
     livraison_gratuit = models.BooleanField( default=False)
     thumbnail = models.ImageField(upload_to='uploads/', blank=True, null=True)
     image = models.ImageField(upload_to='uploads/', blank=True, null=True)
